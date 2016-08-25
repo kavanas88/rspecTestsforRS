@@ -28,7 +28,7 @@ describe "User signs up" do
 		fill_in 'user_name', :with => @user.name
 		fill_in 'user_birthdate', :with => @user.birthdate
 		fill_in 'user_password', :with => @user.password
-		fill_in 'user_password_confirmation', :with => @user.passwordConfirmation
+		fill_in 'user_password_confirmation', :with => @user.password
 		click_button 'Sign up'
 		expect(page).to have_link('Account')
 	end

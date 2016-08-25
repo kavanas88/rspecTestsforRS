@@ -2,12 +2,12 @@
 
 FactoryGirl.define do
 	factory :newUser do
-		username 'abc'
-		email 'abc@gmail.com'
-		name 'abc def'
-		birthdate '01-02-2003'
-		password 'defghijk'
-		passwordConfirmation 'defghijk'
+		username { Faker::Name.name }
+		email { Faker::Internet.email }
+		name { Faker::Name.name }
+		birthdate { Faker::Date.backward(7300) }
+		password { Faker::Internet.password }
+		passwordConfirmation { Faker::Internet.password }
 	end
 
 	factory :memberLogin do
