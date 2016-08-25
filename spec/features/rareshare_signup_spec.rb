@@ -20,7 +20,7 @@ describe "User signs up" do
 	
 	it "should display sign up form" do
 			expect(page).to have_css 'form#new_user'
-		end
+	end
 
 	it "should create a user when valid information is entered" do
 		fill_in 'user_username', :with => @user.username
